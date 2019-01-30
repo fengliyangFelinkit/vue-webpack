@@ -1,28 +1,43 @@
 <template>
 <!-- .vue文件是浏览器不能识别的，webpack通过vue-loader将其打包到浏览器能够识别的js中,这里是
     dist/bundle.js -->
-    <div id="test-vue">
-        {{text}}
+    <div id="app">
+        <div id="cover">
+          <Header></Header>
+          <Footer></Footer>
+        </div>
     </div>
 </template>
 
 <script>
-export default {
-    data(){
-        return{
-            text:'webpack-vue-webpack'
-        }
-    }
+ import Header from './todo/header.vue'
+ import Footer from './todo/footer.jsx'
+ export default {
+   components:{
+       Header,
+       Footer
+   }
 }
 </script>
-<style>
-#test-vue{
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
-    font-style: oblique
 
-
+<style lang="stylus" scoped>
+ #app{
+     position absolute
+     left 0
+     right 0
+     top 0
+     bottom 0
+ }
+ #cover{
+     position absolute
+     left 0
+     right 0
+     top 0
+     bottom 0
+     background-color #999
+     opacity 0.9
+     z-index -1
 }
+
 </style>
 
