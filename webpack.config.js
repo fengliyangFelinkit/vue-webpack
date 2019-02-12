@@ -31,6 +31,7 @@ const config = {
          {
             test:/\.(gif|jpg|jpeg|png|svg)$/,
             use:[
+              
                {
                   loader:'url-loader',
                   options:{
